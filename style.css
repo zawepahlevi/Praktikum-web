@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: powderblue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkblue;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.buatmerah {
+    color: aqua;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+        "nav main"
+        "aside main";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    min-height: 100vh;
+}
+
+.gambar {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+main {
+    grid-area: auto / main / auto / auto;
+    background-color: #ecf0f1;
+    padding: 20px;
+    text-align: justify;
+}

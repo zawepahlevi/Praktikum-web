@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+        <table>
+            <tr>
+                <td>Makanan</td>
+                <td> 
+                    <select id="makanan">
+                        <option value="" disabled selected hidden>Pilih Salah Satu</option>
+                        <option value="25000">Ayam Bakar</option> 
+                        <option value="20000">Ayam Goreng</option> 
+                        <option value="30000">Ayam Mentah</option> 
+                        <option value="50000">Ayam Spesial</option> 
+                    </select>
+                </td>
+                <td id="submit" rowspan="3">
+                    <button type="button" id="submitButton">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Jumlah</td>
+                <td><input type="text" id="jumlah" name=""></td>
+            </tr>
+            <tr>
+                <td>Voucher</td>
+                <td><input type="text" id="voucher" name=""></td>
+            </tr>
+        </table>
+    </form>
+
+    <p id="hasil"></p>
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Nilai Matakuliah</title>
+  </head>
+  <body>
+    <h2>Form Input Nilai Matakuliah</h2>
+    <form action="index.php" method="post">
+      <label form="nilai_matkul1">Nilai Matakuliah 1:</label>
+      <input type="text" name="nilai_matkul1" required /><br />
+
+      <div id="kolom_input"></div>
+
+      <button type="button" id="tambah_input">Tambah Matakuliah</button>
+      <br />
+
+      <input type="submit" value="hitung IPK" />
+    </form>
+
+    <script>
+      var counter = 2;
+      document.getElementById('tambah_input').addEventListener('click', function () {
+          var newLabel = document.createElement('label');
+          newLabel.setAttribute('for', 'nilai_matkul', + counter);
+          newLabel.textContent = 'Nilai Matakuliah ' + (counter) + ':';
+
+          var newInput = document.createElement('input');
+          newInput.type = 'text';
+          newInput.name = 'nilai_matkul' + counter++;
+          newInput.placeholder = 'Nilai Matakuliah ' + (counter - 1);
+
+          document.getElementById('kolom_input').appendChild(newLabel);
+          document.getElementById('kolom_input').appendChild(newInput);
+          document.getElementById('kolom_input').appendChild(document.createElement('br'));
+        });
+    </script>
+  </body>
+</html>
